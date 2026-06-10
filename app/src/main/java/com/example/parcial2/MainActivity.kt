@@ -14,7 +14,7 @@ import com.example.parcial2.ui.theme.Parcial2Theme
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_stadistics)
+        setContentView(R.layout.activity_login)
     }
 }
 
