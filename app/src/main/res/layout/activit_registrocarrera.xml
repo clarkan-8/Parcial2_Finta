@@ -1,7 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#020A08">
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_card"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RACE NAME"
+        android:textColor="#8A8A8A"
+        android:textSize="14sp"
+        android:fontFamily="monospace"/>
+
+    <EditText
+        android:id="@+id/etRaceName"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input"
+        android:hint="Panama City Marathon"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#444444"
+        android:paddingHorizontal="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="START LOCATION"
+        android:textColor="#8A8A8A"
+        android:textSize="14sp"
+        android:fontFamily="monospace"/>
+
+    <EditText
+        android:id="@+id/etStartPoint"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input"
+        android:hint="Cinta Costera"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#444444"
+        android:paddingHorizontal="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="END LOCATION"
+        android:textColor="#8A8A8A"
+        android:textSize="14sp"
+        android:fontFamily="monospace"/>
+
+    <EditText
+        android:id="@+id/etEndPoint"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input"
+        android:hint="Causeway Amador"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#444444"
+        android:paddingHorizontal="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="RUNNERS LIMIT"
+        android:textColor="#8A8A8A"
+        android:textSize="14sp"
+        android:fontFamily="monospace"/>
+
+    <EditText
+        android:id="@+id/etRunners"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input"
+        android:hint="250"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#444444"
+        android:paddingHorizontal="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="RACE DATE"
+        android:textColor="#8A8A8A"
+        android:textSize="14sp"
+        android:fontFamily="monospace"/>
+
+    <EditText
+        android:id="@+id/etRaceDate"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input"
+        android:hint="15/08/2026"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#444444"
+        android:paddingHorizontal="16dp"/>
+
+    <Button
+        android:id="@+id/btnCreateRace"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:text="Create Race"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#111111"
+        android:background="@drawable/bg_pill_active"/>
 
 </LinearLayout>
