@@ -128,3 +128,4 @@
         android:background="@drawable/bg_pill_active"/>
 
 </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
