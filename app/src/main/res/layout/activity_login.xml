@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020A08">
+
+    <!-- Fondo degradado opcional -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_login_gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Barra superior -->
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:background="#050D0D"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finta"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:textColor="#C4F12A"/>
+
+        <Space
+            android:layout_width="24dp"
+            android:layout_height="1dp"/>
+
+        <Button
+            android:id="@+id/btnLoginTab"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="LOGIN"
+            android:textStyle="bold"
+            android:textColor="#111111"
+            android:background="@drawable/bg_pill_active"/>
+
+        <Button
+            android:id="@+id/btnRegisterTab"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="REGISTER"
+            android:textStyle="bold"
+            android:textColor="#8A8A8A"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <!-- Contenido principal -->
+
+    <LinearLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome back."
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="48sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:text="Log your miles. Beat your ghost."
+            android:textColor="#8A8A8A"
+            android:textSize="18sp"
+            android:fontFamily="monospace"/>
+
+        <!-- Card -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EMAIL"
+                android:textColor="#8A8A8A"
+                android:textSize="14sp"
+                android:fontFamily="monospace"/>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:hint="ana@run.com"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#444444"
+                android:paddingHorizontal="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="PASSWORD"
+                android:textColor="#8A8A8A"
+                android:textSize="14sp"
+                android:fontFamily="monospace"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:hint="••••"
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#444444"
+                android:paddingHorizontal="16dp"/>
+
+            <Button
+                android:id="@+id/btnEnter"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:text="Enter"
+                android:textAllCaps="false"
+                android:textColor="#111111"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:background="@drawable/bg_pill_active"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No account? "
+                    android:textColor="#8A8A8A"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+                    android:textStyle="bold"
+                    android:textColor="#C4F12A"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

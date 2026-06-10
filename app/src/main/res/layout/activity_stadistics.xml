@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0F0A"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ===================== TOP BAR ===================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="finta"
+                android:textColor="#C6F432"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ana Rivera · runner"
+                android:textColor="#9AA39A"
+                android:textSize="13sp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="monospace" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_outline_button"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="8dp"
+                android:text="Logout"
+                android:textColor="#46E5C8"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- ===================== NAV TABS ===================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pill_active"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:text="STATISTICS"
+                android:textColor="#0A0F0A"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="RACES"
+                android:textColor="#E8EDE8"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="HISTORY"
+                android:textColor="#E8EDE8"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- ===================== TITLE ===================== -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Statistics"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Your performance at a glance."
+            android:textColor="#9AA39A"
+            android:textSize="16sp"
+            android:fontFamily="monospace" />
+
+        <!-- ===================== STAT CARDS (row 1) ===================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <!-- Total Distance -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL DISTANCE"
+                    android:textColor="#9AA39A"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="46.1 km"
+                    android:textColor="#C6F432"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Total Time -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL TIME"
+                    android:textColor="#9AA39A"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="4h 3m"
+                    android:textColor="#C6F432"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===================== STAT CARDS (row 2) ===================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <!-- Races Run -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RACES RUN"
+                    android:textColor="#9AA39A"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="4"
+                    android:textColor="#C6F432"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Best Pace -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BEST PACE"
+                    android:textColor="#9AA39A"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="4.8 /km"
+                    android:textColor="#C6F432"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===================== PACE TREND CARD ===================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PACE TREND (MIN/KM)"
+                android:textColor="#9AA39A"
+                android:textSize="12sp"
+                android:fontFamily="monospace" />
+
+            <!-- Placeholder para el gráfico de líneas.
+                 Sustituir por tu LineChart (MPAndroidChart) o vista custom. -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_chart_area">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="LineChart"
+                    android:textColor="#46E5C8"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- ===================== DISTANCE PER RACE CARD ===================== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DISTANCE PER RACE (KM)"
+                android:textColor="#9AA39A"
+                android:textSize="12sp"
+                android:fontFamily="monospace" />
+
+            <!-- Gráfico de barras simulado con LinearLayout (weights = valores).
+                 Sustituir por BarChart si prefieres. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:baselineAligned="false"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <!-- Spring ~10 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:background="@drawable/bg_bar" />
+                </LinearLayout>
+
+                <!-- Bay ~5 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:background="@drawable/bg_bar" />
+                </LinearLayout>
+
+                <!-- River ~21 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="21"
+                        android:background="@drawable/bg_bar" />
+                </LinearLayout>
+
+                <!-- Night ~10 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:background="@drawable/bg_bar" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Etiquetas eje X -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Spring"
+                    android:textColor="#9AA39A"
+                    android:textSize="13sp"
+                    android:fontFamily="monospace" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Bay"
+                    android:textColor="#9AA39A"
+                    android:textSize="13sp"
+                    android:fontFamily="monospace" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="River"
+                    android:textColor="#9AA39A"
+                    android:textSize="13sp"
+                    android:fontFamily="monospace" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Night"
+                    android:textColor="#9AA39A"
+                    android:textSize="13sp"
+                    android:fontFamily="monospace" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
