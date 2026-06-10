@@ -19,11 +19,14 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var btnRegister: Button
     private lateinit var txtLogin: TextView
 
+    private lateinit var dbHelper: UserDbHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        // Referencias a las vistas
+            dbHelper = UserDbHelper(this)
+
         btnLoginTab = findViewById(R.id.btnLoginTab)
         btnRegisterTab = findViewById(R.id.btnRegisterTab)
         etFullName = findViewById(R.id.etFullName)
@@ -32,25 +35,10 @@ class RegisterActivity : AppCompatActivity() {
         btnRegister = findViewById(R.id.btnRegister)
         txtLogin = findViewById(R.id.txtLogin)
 
-        // Botón principal: crear cuenta
-        btnRegister.setOnClickListener {
-            registerUser()
-        }
+        btnRegister.setOnClickListener { registerUser() }
 
-        // Tab LOGIN -> ir a la pantalla de login
-        btnLoginTab.setOnClickListener {
-            goToLogin()
-        }
-
-        // Enlace "Login" inferior
-        txtLogin.setOnClickListener {
-            goToLogin()
-        }
-
-        // Tab REGISTER (ya estás aquí)
-        btnRegisterTab.setOnClickListener {
-            // Ya estás en registro, no hace nada
-        }
+        btnLoginTab.setOnClickListener { goToLogin() }
+        txtLogin.setOnClickListener { goToLogin() }
     }
 
     private fun registerUser() {
@@ -58,7 +46,6 @@ class RegisterActivity : AppCompatActivity() {
         val email = etEmail.text.toString().trim()
         val password = etPassword.text.toString().trim()
 
-        // Validaciones
         if (fullName.isEmpty() || email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show()
             return
@@ -74,15 +61,21 @@ class RegisterActivity : AppCompatActivity() {
             return
         }
 
-        // TODO: guardar usuario (base de datos, API, etc.)
-        Toast.makeText(this, "Cuenta creada para $fullName", Toast.LENGTH_SHORT).show()
+        // Guardar en la base de datos
+        val registrado = dbHelper.registrarUsuario(fullName, email, password)
 
-        // Tras registrarse, ir a login
-        goToLogin()
+        if (registrado) {
+            Toast.makeText(this, "Cuenta creada para $fullName", Toast.LENGTH_SHORT).show()
+            goToLogin()
+        } else {
+            Toast.makeText(this, "Ese correo ya está registrado", Toast.LENGTH_SHORT).show()
+        }
     }
 
+    private fun registrarUsuario(fullName: String, email: String, password: String) {}
+
     private fun goToLogin() {
-        startActivity(Intent(this, LoginActivity::class.java))
+        startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
 }
